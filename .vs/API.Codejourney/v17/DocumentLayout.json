@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|c:\\users\\gradilone\\documents\\backend\\api.codejourney\\api.codejourney\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|solutionrelative:api.codejourney\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|c:\\users\\gradilone\\documents\\backend\\api.codejourney\\api.codejourney\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|solutionrelative:api.codejourney\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|c:\\users\\gradilone\\documents\\backend\\api.codejourney\\api.codejourney\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|solutionrelative:api.codejourney\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|c:\\users\\gradilone\\documents\\backend\\api.codejourney\\api.codejourney\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|solutionrelative:api.codejourney\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|c:\\users\\gradilone\\documents\\backend\\api.codejourney\\api.codejourney\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|solutionrelative:api.codejourney\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|c:\\users\\gradilone\\documents\\backend\\api.codejourney\\api.codejourney\\repositories\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5458103F-AF48-4179-900F-F49DCC5F40A5}|API.Codejourney\\API.Codejourney.csproj|solutionrelative:api.codejourney\\repositories\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\appsettings.json",
+              "RelativeDocumentMoniker": "API.Codejourney\\appsettings.json",
+              "ToolTip": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\appsettings.json",
+              "RelativeToolTip": "API.Codejourney\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-11T21:16:10.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "API.Codejourney\\Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "API.Codejourney\\Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:18:55.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "API.Codejourney\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "API.Codejourney\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA5wDgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:15:13.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Repositories\\IUsuariosRepository.cs",
+              "RelativeDocumentMoniker": "API.Codejourney\\Repositories\\IUsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Repositories\\IUsuariosRepository.cs",
+              "RelativeToolTip": "API.Codejourney\\Repositories\\IUsuariosRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:19:30.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "API.Codejourney\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Models\\Usuario.cs",
+              "RelativeToolTip": "API.Codejourney\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:09:38.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Program.cs",
+              "RelativeDocumentMoniker": "API.Codejourney\\Program.cs",
+              "ToolTip": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\Program.cs",
+              "RelativeToolTip": "API.Codejourney\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:02:22.792Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

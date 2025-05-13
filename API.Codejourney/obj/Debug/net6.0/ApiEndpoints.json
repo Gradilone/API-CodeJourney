@@ -11,38 +11,6 @@
   },
   {
     "ContainingType": "API.Codejourney.Controllers.UsuariosController",
-    "Method": "Insert",
-    "RelativePath": "api/Usuarios",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "usuario",
-        "Type": "API.Codejourney.Models.Usuario",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API.Codejourney.Controllers.UsuariosController",
-    "Method": "Update",
-    "RelativePath": "api/Usuarios",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "usuario",
-        "Type": "API.Codejourney.Models.Usuario",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API.Codejourney.Controllers.UsuariosController",
     "Method": "Get",
     "RelativePath": "api/Usuarios/{id}",
     "HttpMethod": "GET",
@@ -68,6 +36,54 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Codejourney.Controllers.UsuariosController",
+    "Method": "Update",
+    "RelativePath": "api/Usuarios/atualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "API.Codejourney.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Codejourney.Controllers.UsuariosController",
+    "Method": "Insert",
+    "RelativePath": "api/Usuarios/cadastro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "API.Codejourney.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Codejourney.Controllers.UsuariosController",
+    "Method": "Login",
+    "RelativePath": "api/Usuarios/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "API.Codejourney.DTO.LoginDto",
         "IsRequired": true
       }
     ],

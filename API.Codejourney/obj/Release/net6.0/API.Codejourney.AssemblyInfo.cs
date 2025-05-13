@@ -13,7 +13,7 @@ using System.Reflection;
 
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("1fe97967-da76-4b31-993c-8abe7c38e518")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("API.Codejourney")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ee60dc5c6c33c610feaa17cc36e74ee57daaaa4")]
 [assembly: System.Reflection.AssemblyProductAttribute("API.Codejourney")]

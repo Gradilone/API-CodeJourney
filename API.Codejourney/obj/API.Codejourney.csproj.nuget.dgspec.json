@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\API.Codejourney.csproj": {}
+    "C:\\Users\\Gradilone\\Documents\\TCC\\API-CodeJourney\\API.Codejourney\\API.Codejourney.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\API.Codejourney.csproj": {
+    "C:\\Users\\Gradilone\\Documents\\TCC\\API-CodeJourney\\API.Codejourney\\API.Codejourney.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\API.Codejourney.csproj",
+        "projectUniqueName": "C:\\Users\\Gradilone\\Documents\\TCC\\API-CodeJourney\\API.Codejourney\\API.Codejourney.csproj",
         "projectName": "API.Codejourney",
-        "projectPath": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\API.Codejourney.csproj",
+        "projectPath": "C:\\Users\\Gradilone\\Documents\\TCC\\API-CodeJourney\\API.Codejourney\\API.Codejourney.csproj",
         "packagesPath": "C:\\Users\\Gradilone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gradilone\\Documents\\Backend\\API.Codejourney\\API.Codejourney\\obj\\",
+        "outputPath": "C:\\Users\\Gradilone\\Documents\\TCC\\API-CodeJourney\\API.Codejourney\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,6 +53,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.66, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.36, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

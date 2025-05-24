@@ -5,6 +5,7 @@ using API.Codejourney.Data;
 using API.Codejourney.Models;
 using Microsoft.EntityFrameworkCore;
 using Dapper;
+using Microsoft.AspNetCore.JsonPatch;
 
 public class UsuarioRepository : IUsuariosRepository
 {
@@ -37,11 +38,21 @@ public class UsuarioRepository : IUsuariosRepository
 
         if (usuarioExistente != null)
         {
-            usuarioExistente.Nome = usuario.Nome;
-            usuarioExistente.UserName = usuario.UserName;
-            usuarioExistente.Email = usuario.Email;
-            usuarioExistente.DataNascimento = usuario.DataNascimento;
-            usuarioExistente.Senha = usuario.Senha;
+            if (usuario.Nome != null)
+                usuarioExistente.Nome = usuario.Nome;
+
+            if (usuario.UserName != null)
+                usuarioExistente.UserName = usuario.UserName;
+
+            if (usuario.Email != null)
+                usuarioExistente.Email = usuario.Email;
+
+            if (usuario.DataNascimento != null && usuario.DataNascimento != DateTime.MinValue)
+                usuarioExistente.DataNascimento = usuario.DataNascimento;
+
+            if (usuario.Senha != null)
+                usuarioExistente.Senha = usuario.Senha;
+
             _connection.SaveChanges();
         }
     }

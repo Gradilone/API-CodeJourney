@@ -4,7 +4,7 @@
     {
         public string TokenName { get; set; }
 
-        public string Password { get; set; }
+        public int id { get; set; }
 
         public DateTime ExpireAt { get; set; }
 

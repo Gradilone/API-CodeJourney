@@ -7,6 +7,7 @@ using API.Codejourney.Models;
 using API.Codejourney.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -52,7 +53,6 @@ namespace API.Codejourney.Controllers
         [AllowAnonymous]
         public IActionResult Insert([FromBody] Usuario usuario)
         {
-            // Verifica se já existe um usuário com o mesmo nome
             var usuarioExistente = _repository
                 .GetUsuarios()
                 .FirstOrDefault(u => u.UserName == usuario.UserName || u.Email == usuario.Email);
@@ -62,16 +62,62 @@ namespace API.Codejourney.Controllers
                 return BadRequest("Já existe um usuário com esse nome de usuário.");
             }
 
+            usuario.DataCadastro = DateTime.Now;
+
             _repository.Insert(usuario);
             return Ok(usuario);
         }
 
-        [HttpPut("atualizar")]
-        public IActionResult Update([FromBody] Usuario usuario)
+        [HttpPut("atualizar/{id}")]
+        [AllowAnonymous]
+        public IActionResult Update(int id, [FromBody] Usuario usuario)
         {
-            _repository.Update(usuario);
-            return Ok(usuario);
+            if (usuario == null)
+                return BadRequest("Usuário inválido.");
+
+            var usuarioExistente = _repository.Get(id);
+            if (usuarioExistente == null)
+                return NotFound("Usuário não encontrado.");
+
+            var todosUsuarios = _repository.GetUsuarios();
+
+            // Validação se novo UserName já existe
+            if (!string.IsNullOrEmpty(usuario.UserName) &&
+                todosUsuarios.Any(u => u.Id != id && u.UserName == usuario.UserName))
+            {
+                return Conflict("UserName já está em uso por outro usuário.");
+            }
+
+            // Validação se novo Email já existe
+            if (!string.IsNullOrEmpty(usuario.Email) &&
+                todosUsuarios.Any(u => u.Id != id && u.Email == usuario.Email))
+            {
+                return Conflict("Email já está em uso por outro usuário.");
+            }
+
+            if (!string.IsNullOrEmpty(usuario.Nome))
+                usuarioExistente.Nome = usuario.Nome;
+
+            if (!string.IsNullOrEmpty(usuario.UserName))
+                usuarioExistente.UserName = usuario.UserName;
+
+            if (!string.IsNullOrEmpty(usuario.Email))
+                usuarioExistente.Email = usuario.Email;
+
+            if (usuario.DataNascimento.HasValue && usuario.DataNascimento.Value != DateTime.MinValue)
+            {
+                usuarioExistente.DataNascimento = usuario.DataNascimento.Value;
+            }
+
+            if (!string.IsNullOrEmpty(usuario.Senha))
+                usuarioExistente.Senha = usuario.Senha;
+
+            _repository.Update(usuarioExistente);
+
+            return Ok(usuarioExistente);
         }
+
+
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
@@ -96,7 +142,7 @@ namespace API.Codejourney.Controllers
             var response = new LoginResponse
             {
                 TokenName = token,
-                ExpireAt = expiration
+                id = usuario.Id
             };
 
             return Ok(response);
@@ -106,9 +152,9 @@ namespace API.Codejourney.Controllers
         {
             var claims = new[]
             {
-        new Claim(ClaimTypes.Name, usuario.UserName),
-        new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString())
-    };
+                new Claim(ClaimTypes.Name, usuario.UserName),
+                new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString())
+            };
 
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(

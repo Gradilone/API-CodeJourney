@@ -1,4 +1,5 @@
 ﻿using API.Codejourney.Models;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace API.Codejourney.Repositories
 {
@@ -12,6 +13,6 @@ namespace API.Codejourney.Repositories
 
         public void Update(Usuario usuario);
 
-        public void Delete(int id);  
+        public void Delete(int id);
     }
 }

@@ -6,6 +6,7 @@ using API.Codejourney.Models;
 using Microsoft.EntityFrameworkCore;
 using Dapper;
 using Microsoft.AspNetCore.JsonPatch;
+using API.Codejourney.DTO;
 
 public class UsuarioRepository : IUsuariosRepository
 {
@@ -65,6 +66,31 @@ public class UsuarioRepository : IUsuariosRepository
             _connection.Usuarios.Remove(usuario);
             _connection.SaveChanges();
         }
+    }
+
+    public void UpdateNivelEProgresso(int id, int nivel, float progresso)
+    {
+        var usuarioExistente = _connection.Usuarios.FirstOrDefault(x => x.Id == id);
+
+        if (usuarioExistente != null)
+        {
+            usuarioExistente.Nivel = nivel;
+            usuarioExistente.Progresso = progresso;
+
+            _connection.SaveChanges();
+        }
+    }
+
+    public ProgressoDTO GetNivelEProgresso(int id)
+    {
+        return _connection.Usuarios
+            .Where(u => u.Id == id)
+            .Select(u => new ProgressoDTO
+            {
+                Nivel = u.Nivel,
+                Progresso = u.Progresso
+            })
+            .FirstOrDefault();
     }
 
 }

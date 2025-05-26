@@ -11,12 +11,17 @@ namespace API.Codejourney.Data
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Jornadas> Jornadas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Usuario>()
                 .Property(u => u.Id)
-                .ValueGeneratedOnAdd(); 
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Jornadas>()
+                .Property(j => j.Id)
+                .ValueGeneratedOnAdd();
         }
     }
 }

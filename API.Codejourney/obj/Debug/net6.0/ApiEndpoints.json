@@ -1,5 +1,68 @@
 [
   {
+    "ContainingType": "API.Codejourney.Controllers.JornadaController",
+    "Method": "AtualizarJornada",
+    "RelativePath": "api/Jornada/atualizar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "jornadaAtualizada",
+        "Type": "API.Codejourney.Models.Jornadas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Codejourney.Controllers.JornadaController",
+    "Method": "InserirJornada",
+    "RelativePath": "api/Jornada/inserir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jornada",
+        "Type": "API.Codejourney.Models.Jornadas",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Codejourney.Controllers.JornadaController",
+    "Method": "GetJornadasPorNome",
+    "RelativePath": "api/Jornada/pegar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jornNome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Codejourney.Controllers.UsuariosController",
     "Method": "Get",
     "RelativePath": "api/Usuarios",
@@ -43,12 +106,54 @@
   },
   {
     "ContainingType": "API.Codejourney.Controllers.UsuariosController",
-    "Method": "Update",
-    "RelativePath": "api/Usuarios/atualizar",
+    "Method": "UpdateNivelEProgresso",
+    "RelativePath": "api/Usuarios/{id}/nivel-progresso",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "API.Codejourney.DTO.ProgressoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Codejourney.Controllers.UsuariosController",
+    "Method": "GetNivelEProgresso",
+    "RelativePath": "api/Usuarios/{id}/nivel-progresso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Codejourney.Controllers.UsuariosController",
+    "Method": "Update",
+    "RelativePath": "api/Usuarios/atualizar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
       {
         "Name": "usuario",
         "Type": "API.Codejourney.Models.Usuario",

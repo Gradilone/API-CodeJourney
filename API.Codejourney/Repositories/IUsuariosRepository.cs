@@ -1,4 +1,5 @@
-﻿using API.Codejourney.Models;
+﻿using API.Codejourney.DTO;
+using API.Codejourney.Models;
 using Microsoft.AspNetCore.JsonPatch;
 
 namespace API.Codejourney.Repositories
@@ -14,5 +15,8 @@ namespace API.Codejourney.Repositories
         public void Update(Usuario usuario);
 
         public void Delete(int id);
+
+        public void UpdateNivelEProgresso(int id, int nivel, float progresso);
+        public ProgressoDTO GetNivelEProgresso(int id);
     }
 }

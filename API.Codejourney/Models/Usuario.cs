@@ -21,6 +21,10 @@ namespace API.Codejourney.Models
 
         public DateTime? DataCadastro { get; set; }
 
+        public int Nivel { get; set; }
+
+        public float Progresso { get; set; }
+
     }
 }
     

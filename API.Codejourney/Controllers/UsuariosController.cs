@@ -69,7 +69,6 @@ namespace API.Codejourney.Controllers
         }
 
         [HttpPut("atualizar/{id}")]
-        [AllowAnonymous]
         public IActionResult Update(int id, [FromBody] Usuario usuario)
         {
             if (usuario == null)
@@ -81,14 +80,12 @@ namespace API.Codejourney.Controllers
 
             var todosUsuarios = _repository.GetUsuarios();
 
-            // Validação se novo UserName já existe
             if (!string.IsNullOrEmpty(usuario.UserName) &&
                 todosUsuarios.Any(u => u.Id != id && u.UserName == usuario.UserName))
             {
                 return Conflict("UserName já está em uso por outro usuário.");
             }
 
-            // Validação se novo Email já existe
             if (!string.IsNullOrEmpty(usuario.Email) &&
                 todosUsuarios.Any(u => u.Id != id && u.Email == usuario.Email))
             {
@@ -172,6 +169,30 @@ namespace API.Codejourney.Controllers
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        [HttpPut("{id}/nivel-progresso")]
+        public IActionResult UpdateNivelEProgresso(int id, [FromBody] ProgressoDTO dto)
+        {
+            var usuario = _repository.Get(id);
+            if (usuario == null)
+            {
+                return NotFound("Usuário não encontrado.");
+            }
+
+            _repository.UpdateNivelEProgresso(id, dto.Nivel, dto.Progresso);
+            return Ok();
+        }
+
+        [HttpGet("{id}/nivel-progresso")]
+        public IActionResult GetNivelEProgresso(int id)
+        {
+            var progresso = _repository.GetNivelEProgresso(id);
+
+            if (progresso == null)
+                return NotFound(new { message = "Usuário não encontrado." });
+
+            return Ok(progresso);
         }
 
     }

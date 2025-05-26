@@ -17,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=BaseCodejourney.db"));
 
 builder.Services.AddScoped<IUsuariosRepository, UsuarioRepository>();
+builder.Services.AddScoped<IJornadaRepository, JornadaRepository>();
 
 builder.Services.AddAuthentication(options =>
 {

@@ -18,14 +18,14 @@ namespace API.Codejourney.Controllers
         }
 
         [HttpPost("inserir")]
-        public IActionResult InserirJornada([FromBody] Jornadas jornada, [FromQuery] int usuarioId)
+        public IActionResult InserirJornada([FromBody] Jornadas jornada)
         {
             if (jornada == null)
             {
                 return BadRequest("Dados da jornada inválidos.");
             }
 
-            _jornadaRepository.Insert(jornada, usuarioId);
+            _jornadaRepository.Insert(jornada);
             return Ok("Jornada inserida com sucesso.");
         }
 

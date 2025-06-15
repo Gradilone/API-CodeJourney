@@ -13,9 +13,8 @@ namespace API.Codejourney.Repositories
             _connection = context;
         }
 
-        public void Insert(Jornadas jornada, int usuarioId)
-        {
-            jornada.UsuarioId = usuarioId;  
+        public void Insert(Jornadas jornada)
+        { 
             _connection.Jornadas.Add(jornada);
             _connection.SaveChanges();
         }
